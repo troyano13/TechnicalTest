@@ -6,6 +6,7 @@ import java.util.List;
 
 import org.openqa.selenium.Keys;
 
+import co.com.automationpractice.certifications.automationpracticeweb.interactions.WaitInteraction;
 import co.com.automationpractice.certifications.automationpracticeweb.model.LoginData;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -32,13 +33,18 @@ public class ToFillFormCreateAccount implements Task {
 				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.LASTA_NAME).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.TXT_LAST_NAME ).thenHit(Keys.ENTER),
 				Enter.theValue(datosLogueo.get(0).getEmail()).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.TXT_EMAIL_ADDRESS ).thenHit(Keys.ENTER),
 				Enter.theValue(datosLogueo.get(0).getPassword()).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.TXT_PASSWORD_CREATE_AN_ACCOUNT).thenHit(Keys.ENTER),
+				WaitInteraction.waitClass(co.com.automationpractice.certifications.automationpracticeweb.util.constants.WaitTime.TWO),
 				Click.on(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.BTN_DAY),
-				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.TRES).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.BTN_DAY ).thenHit(Keys.ENTER),
+				Click.on(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.DAY),
+				//Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.TRES).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.BTN_DAY ).thenHit(Keys.ENTER),
+				WaitInteraction.waitClass(co.com.automationpractice.certifications.automationpracticeweb.util.constants.WaitTime.TWO),
 				Click.on(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.BTN_MONTH),
-				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.MARZO).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.BTN_MONTH ).thenHit(Keys.ENTER),
+				Click.on(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.MONTH),
+				//Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.MARZO).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.BTN_MONTH ).thenHit(Keys.ENTER),
 				Click.on(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.BTN_YEARS),
-				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.AÑO).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.BTN_YEARS ).thenHit(Keys.ENTER),
-				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.AÑO).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.BTN_YEARS ).thenHit(Keys.ENTER),
+				//Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.AÑO).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.BTN_YEARS ).thenHit(Keys.ENTER),
+				Click.on(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.YEARS),
+				WaitInteraction.waitClass(co.com.automationpractice.certifications.automationpracticeweb.util.constants.WaitTime.TWO),
 				Click.on(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.CLIK_RECEIVE),
 				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.FIRST_NAME).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.TXT_FIRST_NAME_TWO ).thenHit(Keys.ENTER),
 				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.LASTA_NAME).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.TXT_LAST_NAME_TWO ).thenHit(Keys.ENTER),
@@ -47,15 +53,17 @@ public class ToFillFormCreateAccount implements Task {
 				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.ADDRESS_2).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.TXT_ADDRESS_TWO_CREATE_AN_ACCOUNT).thenHit(Keys.ENTER),
 				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.CITY).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.TXT_CITY_CREATE_AN_ACCOUNT ).thenHit(Keys.ENTER),
 				Click.on(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.CLIK_STATE),
-				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.STATE).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.CLIK_STATE).thenHit(Keys.ENTER),
+				Click.on(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.STATE),
+				//Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.STATE).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.CLIK_STATE).thenHit(Keys.ENTER),
 				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.POSTAL_CODE).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.TXT_POSTAL_CODE_CREATE_AN_ACCOUNT ).thenHit(Keys.ENTER),
 				Click.on(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.CLIK_COUNTRY),
 				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.COUNTRY).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.CLIK_COUNTRY).thenHit(Keys.ENTER),
 				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.ADDITIONA_INFORMATION).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.TXT_ADDITIONAL_DESCRIPCION ).thenHit(Keys.ENTER),
 				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.PHONE).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.TXT_FIRST_NAME ).thenHit(Keys.ENTER),
 				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.MOBIL).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.TXT_FIRST_NAME ).thenHit(Keys.ENTER),
-				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.ADDRESS_REFERENCE).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.TXT_ADDRESS_REFERENCE ).thenHit(Keys.ENTER)
-							
+				Enter.theValue(co.com.automationpractice.certifications.automationpracticeweb.util.constants.LogueoData.ADDRESS_REFERENCE).into(co.com.automationpractice.certifications.automationpracticeweb.userinterface.FormCreateAccountUI.TXT_ADDRESS_REFERENCE ).thenHit(Keys.ENTER),
+				WaitInteraction.waitClass(co.com.automationpractice.certifications.automationpracticeweb.util.constants.WaitTime.THREE)
+		
 				);
 	}
 

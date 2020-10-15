@@ -40,16 +40,26 @@ public class FormCreateAccountUI {
 			.the("TXT to write address references to create account").locatedBy("//*[@id='alias']");
 	public static final Target BTN_DAY= Target
 			.the("Button of day").locatedBy("//*[@id='days']");
+	public static final Target DAY= Target
+			.the("Button of day").locatedBy("//*[@id='days']/option[12]");
 	public static final Target BTN_MONTH= Target
 			.the("Button of month").locatedBy("//*[@name='months']");
+	public static final Target MONTH= Target
+			.the("Button of month").locatedBy("//*[@id='months']/option[3]");
 	public static final Target BTN_YEARS= Target
 			.the("Button of years").locatedBy("//*[@id='years']");
+	public static final Target YEARS= Target
+			.the("Button of years").locatedBy("//*[@id='years']/option[4]");
 	public static final Target CLIK_RECEIVE= Target
 			.the("Clik receive").locatedBy("//*[@id='optin']");
 	public static final Target CLIK_STATE= Target
 			.the("Clik state").locatedBy("//*[@id='id_state']");
+	public static final Target STATE= Target
+			.the("Clik state").locatedBy("//*[@id='id_state']/option[3]");
 	public static final Target CLIK_COUNTRY= Target
 			.the("Clik country").locatedBy("//*[@id='id_country']");
+	public static final Target COUNTRY= Target
+			.the("Clik country").locatedBy("//*[@id='uniform-id_country']/span");
 	public static final Target BTN_REGISTRE= Target
 			.the("btn registre").locatedBy("//*[@id='optin']");
 
