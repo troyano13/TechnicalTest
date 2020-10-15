@@ -8,12 +8,12 @@ Feature: User Creates an account
     Given The user is on Homepage
     When the user clicks on Sign
     And user enters email
-      | email                   |
-      | alexa02132009@gmail.com |
+      | email                    |
+      | alexa021320093@gmail.com |
     And User Clicks create an account
     And User fills sign up form
-      | email             | password        |
-      | alexa@hotmail.com | A2cJC8rrrHLuNm@ |
+      | email              | password        |
+      | alexa2@hotmail.com | A2cJC8rrrHLuNm@ |
     And user clicks register
     Then the user is taken my account page
 
